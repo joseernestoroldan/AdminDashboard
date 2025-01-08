@@ -3,18 +3,22 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { authConfig } from "./authConfig";
 import { connectDB } from "./lib/utils";
 import { User } from "./lib/models";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 const login = async (credentials) => {
   try {
-    connectDB();
+    console.log("credentials:", credentials);
+    await connectDB();
     const user = await User.findOne({ username: credentials.username });
+    console.log("user1:", user);
 
     if (!user) throw new Error("There is no user");
-    const isPasswordCorrect = await bcrypt.compare(
-      credentials.password,
-      user.password
-    );
+    // const isPasswordCorrect = await bcrypt.compare(
+    //   credentials.password,
+    //   user.password
+    // );
+    const isPasswordCorrect = credentials.password === user.password;
+    console.log("isPasswordCorrect:", isPasswordCorrect);
     if (!isPasswordCorrect) throw new Error("Password Incorrect");
 
     return user;

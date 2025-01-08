@@ -3,7 +3,7 @@ import { revalidatePath } from "next/cache";
 import { Product, User } from "./models";
 import { connectDB } from "./utils";
 import { redirect } from "next/navigation";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import { signIn } from "../auth";
 
 export const addUser = async (formData) => {
@@ -139,6 +139,7 @@ export const deleteProduct = async (formData) => {
 export const authenticate = async (prevState, formData) => {
 
   const{username, password} = Object.fromEntries(formData)
+  console.log("USERNAME:",username, "PASSWORD", password) 
   try {
     await signIn("credentials",{username, password})
     

@@ -74,7 +74,6 @@ const productSchema = new mongoose.Schema(
     createdAt: {
       type: String,
     },
-
   },
   { timestamps: true }
 );
