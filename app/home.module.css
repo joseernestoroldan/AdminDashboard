@@ -1,0 +1,93 @@
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+  
+}
+
+.containerFront {
+  margin: 0 auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.headerFront {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bolder;
+  padding-top: 20px;
+}
+
+.subHeaderFront{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bolder;
+    padding-top: 20px;
+}
+
+.thirdHeaderFront{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+    padding-top: 20px;
+}
+
+.paragraphFront {
+  text-align: justify;
+  text-indent: 20px;
+  font-size: 1.1rem;
+  
+}
+
+.access {
+   width: 600px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: black;
+  
+}
+.title {
+  font-weight: bolder;
+}
+
+.linkFront {
+  font-weight: bolder;
+  color: blue;
+}
+
+.containerElement {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+}
+.buttonFront{
+    background-color: #a3a3a3;
+    border: none;
+    color: white;
+    padding: 15px 54px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.value{
+    font-style: italic;
+}
